@@ -1,0 +1,44 @@
+name: Сбор новостей
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # каждые 2 часа (время UTC)
+  workflow_dispatch:         # кнопка ручного запуска во вкладке Actions
+
+permissions:
+  contents: write
+
+concurrency: news
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Установка библиотек
+        run: pip install -r requirements.txt
+
+      - name: Сбор новостей
+        run: python news_parser.py
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          RSSHUB_URL: ${{ secrets.RSSHUB_URL }}
+
+      - name: Лента новостей
+        run: python news_parser.py --html docs/index.html --days 14
+
+      - name: Сохранение
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add news.db docs/index.html feeds_cache.json out/last_run_status.csv
+          git diff --cached --quiet || git commit -m "Новости $(date -u '+%Y-%m-%d %H:%M')"
+          git push
