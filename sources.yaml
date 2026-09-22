@@ -1,0 +1,59 @@
+# type:  auto (RSS-автопоиск, иначе HTML) | rss | html | telegram | youtube | reddit | google_news | twitch | rsshub
+# group: competitor | own | room | media | community | influencer
+# Необязательные поля: keywords: [...] — фильтр по словам; selector / url_pattern / min_title — для html; disabled: true
+
+sources:
+  # --- Сайты и форумы ---
+  - {name: "GipsyTeam Forum",        type: auto, url: "https://forum.gipsyteam.ru/",   group: competitor}
+  - {name: "Pokeroff",               type: auto, url: "https://www.pokeroff.ru/",      group: own}
+  - {name: "WorldPokerDeals",        type: auto, url: "https://ru.worldpokerdeals.com/", group: competitor}
+  - {name: "Google News: poker",     type: google_news, query: "poker", hl: ru, gl: RU, ceid: "RU:ru", group: media}
+  - {name: "Pikabu #Покер",          type: html, url: "https://pikabu.ru/tag/%D0%9F%D0%BE%D0%BA%D0%B5%D1%80", url_pattern: "/story/", group: community}
+  - {name: "CardMates",              type: auto, url: "https://cardmates.net/new",     group: media}
+  - {name: "Poker.ru",               type: auto, url: "https://poker.ru/",             group: competitor}
+  - {name: "PekarStas",              type: auto, url: "https://pekarstas.com/",        group: competitor}
+  - {name: "Poker-Red",              type: auto, url: "https://www.poker-red.com/",    group: media}
+  - {name: "SuperPoker BR",          type: auto, url: "https://superpoker.com.br/noticias", group: media}
+  - {name: "Poker Industry PRO",     type: auto, url: "https://pokerindustrypro.com/", group: media}
+  - {name: "2+2 News, Views, Gossip", type: auto, url: "https://forumserver.twoplustwo.com/29/news-views-gossip/", group: community}
+  - {name: "Cardplayer Lifestyle",   type: auto, url: "https://cardplayerlifestyle.com/", group: media}
+  - {name: "PokerNews",              type: auto, url: "https://www.pokernews.com/",    group: media}
+  - {name: "Professional Rakeback",  type: auto, url: "https://professionalrakeback.com/", group: media}
+  - {name: "Upswing Blog",           type: auto, url: "https://upswingpoker.com/blog/", group: media}
+
+  # --- Telegram (публичное веб-превью t.me/s/...) ---
+  - {name: "TG babyshark4",          type: telegram, channel: babyshark4,        group: community}
+  - {name: "TG GipsyTeam",           type: telegram, channel: gipsyteamrussia,   group: competitor}
+  - {name: "TG WorldPokerDeals",     type: telegram, channel: worldpokerdealsRU, group: competitor}
+  - {name: "TG Pokerdom",            type: telegram, channel: pokerdom_official, group: room}
+  - {name: "TG toppokerbro",         type: telegram, channel: toppokerbro,       group: community}
+
+  # --- YouTube (RSS каналов) ---
+  - {name: "YT GipsyTeam",           type: youtube, user: gipsyteam,  group: competitor}
+  - {name: "YT UCeRUK5OM9ID6rvCwWYFkWCg", type: youtube, channel_id: UCeRUK5OM9ID6rvCwWYFkWCg, group: influencer}
+  - {name: "YT Joe Ingram",          type: youtube, user: joeingram1, group: influencer}
+  - {name: "YT UCHyxrwq_j4vcReGKd42tWyw", type: youtube, channel_id: UCHyxrwq_j4vcReGKd42tWyw, group: influencer}
+  - {name: "YT UCQIWNGKEIHM1B6NKcbKgMEg", type: youtube, channel_id: UCQIWNGKEIHM1B6NKcbKgMEg, group: influencer}
+
+  # --- Twitch (API: TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET) ---
+  - {name: "Twitch innerpsycho",     type: twitch, channel: innerpsycho, group: influencer}
+  - {name: "Twitch allinpav",        type: twitch, channel: allinpav,    group: influencer}
+  - {name: "Twitch Poker clips 7d",  type: twitch, game: "Poker", days: 7, group: community}
+
+  # --- Reddit ---
+  - {name: "Reddit r/poker",         type: reddit, subreddit: poker, group: community}
+
+  # --- X / Twitter (RSSHUB_URL; на своём инстансе RSSHub нужен TWITTER_AUTH_TOKEN) ---
+  - {name: "X innerpsy",             type: rsshub, route: "/twitter/user/innerpsy",        group: influencer}
+  - {name: "X RealKidPoker",         type: rsshub, route: "/twitter/user/RealKidPoker",    group: influencer}
+  - {name: "X 888poker",             type: rsshub, route: "/twitter/user/888poker",        group: room}
+  - {name: "X GGPokerOfficial",      type: rsshub, route: "/twitter/user/GGPokerOfficial", group: room}
+  - {name: "X ACR_POKER",            type: rsshub, route: "/twitter/user/ACR_POKER",       group: room}
+  - {name: "X RealPokerKing",        type: rsshub, route: "/twitter/user/RealPokerKing",   group: influencer}
+  - {name: "X worldpokerdeals",      type: rsshub, route: "/twitter/user/worldpokerdeals", group: competitor}
+  - {name: "X PokerNews",            type: rsshub, route: "/twitter/user/PokerNews",       group: media}
+  - {name: "X LexVeldhuis",          type: rsshub, route: "/twitter/user/LexVeldhuis",     group: influencer}
+  - {name: "X WSOPcom",              type: rsshub, route: "/twitter/user/WSOPcom",         group: room}
+
+  # --- Instagram (RSSHUB_URL; на инстансе нужны данные IG-аккаунта) ---
+  - {name: "IG fedorholz",           type: rsshub, route: "/instagram/user/fedorholz",     group: influencer}
