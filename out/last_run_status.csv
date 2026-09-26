@@ -1,27 +1,27 @@
 ﻿source,type,status,via,found,new
 Pokeroff,auto,ok,,20,0
-Google News: poker,google_news,ok,,100,0
 CardMates,auto,ok,,1,0
+Google News: poker,google_news,ok,,100,0
 Pikabu #Покер,html,ok,,4,0
-"2+2 News, Views, Gossip",auto,ошибка: RuntimeError: антибот-защита (Cloudflare): нужен браузер или другой канал,,0,0
 Poker Industry PRO,auto,ok,,12,0
+"2+2 News, Views, Gossip",auto,ошибка: RuntimeError: антибот-защита (Cloudflare): нужен браузер или другой канал,,0,0
 PekarStas,auto,ошибка: RuntimeError: ничего не найдено: нужен selector/url_pattern в sources.yaml,html,0,0
-Cardplayer Lifestyle,auto,ok,,10,0
 Professional Rakeback,auto,ok,,10,0
+Cardplayer Lifestyle,auto,ok,,10,0
+SuperPoker BR,auto,ok,html,14,0
 Poker-Red,auto,ok,html,21,0
-TG babyshark4,telegram,ok,,20,0
-TG GipsyTeam,telegram,ok,,19,0
-TG WorldPokerDeals,telegram,ok,,19,0
-TG Pokerdom,telegram,"ошибка: RuntimeError: нет постов: канал закрыт, не существует или веб-превью отключено",,0,0
 WorldPokerDeals,auto,ok,html,28,0
+TG WorldPokerDeals,telegram,ok,,19,1
+TG GipsyTeam,telegram,ok,,18,1
+TG Pokerdom,telegram,"ошибка: RuntimeError: нет постов: канал закрыт, не существует или веб-превью отключено",,0,0
 TG toppokerbro,telegram,"ошибка: RuntimeError: нет постов: канал закрыт, не существует или веб-превью отключено",,0,0
+TG babyshark4,telegram,ok,,20,0
+GipsyTeam Forum,auto,ошибка: RuntimeError: ничего не найдено: нужен selector/url_pattern в sources.yaml,html,0,0
 YT GipsyTeam,youtube,ошибка: HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?user=gipsyteam,,0,0
-YT Joe Ingram,youtube,ok,,15,0
-YT UCHyxrwq_j4vcReGKd42tWyw,youtube,ok,,15,0
 Twitch innerpsycho,twitch,пропущен: нет TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET,,0,0
 Twitch allinpav,twitch,пропущен: нет TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET,,0,0
 Twitch Poker clips 7d,twitch,пропущен: нет TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET,,0,0
-YT UCeRUK5OM9ID6rvCwWYFkWCg,youtube,ok,,15,0
+YT Joe Ingram,youtube,ok,,15,0
 X innerpsy,rsshub,пропущен: не задан RSSHUB_URL,,0,0
 X RealKidPoker,rsshub,пропущен: не задан RSSHUB_URL,,0,0
 X 888poker,rsshub,пропущен: не задан RSSHUB_URL,,0,0
@@ -33,10 +33,10 @@ X PokerNews,rsshub,пропущен: не задан RSSHUB_URL,,0,0
 X LexVeldhuis,rsshub,пропущен: не задан RSSHUB_URL,,0,0
 X WSOPcom,rsshub,пропущен: не задан RSSHUB_URL,,0,0
 IG fedorholz,rsshub,пропущен: не задан RSSHUB_URL,,0,0
+YT UCeRUK5OM9ID6rvCwWYFkWCg,youtube,ok,,15,0
+YT UCHyxrwq_j4vcReGKd42tWyw,youtube,ok,,15,0
 YT UCQIWNGKEIHM1B6NKcbKgMEg,youtube,ok,,15,0
-SuperPoker BR,auto,ok,html,14,0
+Reddit r/poker,reddit,ok,,25,1
 Poker.ru,auto,ok,html,50,0
-GipsyTeam Forum,auto,ошибка: RuntimeError: ничего не найдено: нужен selector/url_pattern в sources.yaml,html,0,0
-Reddit r/poker,reddit,ok,,25,2
 Upswing Blog,auto,ok,,10,0
-PokerNews,auto,ok,html,50,1
+PokerNews,auto,ok,html,50,0
